@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Tourism Management</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<a href="{% url '' %}">Home |</a>
+<a href ="{% url 'register'%}">Sign-up |</a>
+<a href="{% url 'login' %}">Login |</a>
+<a href="{% url 'checkchangepassword' %}">Change Password |</a>
+<h2 align="center"><font color="brown" style="font-style:italic" size="11px"> Himalaya Travel Tourism Management</font></h2>
+<br>
+{% block 'b1'%}
+<div>
+    {% for i in messages %}
+    <h4 align="center"><font color="red"> {{i}}</font></h4>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html >
